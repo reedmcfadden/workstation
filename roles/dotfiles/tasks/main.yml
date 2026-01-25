@@ -21,10 +21,10 @@
     - .vimrc
     - .tmux.conf
 
-- name: Ensure Scripts directory is linked
+- name: Ensure Scripts directory is linked to .local/bin
   file:
     src: "{{ workstation_dir }}/Scripts"
-    dest: "{{ home }}/Scripts"
+    dest: "{{ home }}/.local/bin"
     state: link
     force: true
 
