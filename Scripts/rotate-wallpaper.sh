@@ -1,6 +1,6 @@
 #!/bin/bash
 # Rotate wallpaper from folder
-WALLPAPER_DIR="{{ wallpaper_dir }}"
+WALLPAPER_DIR="${HOME}/Pictures/Wallpapers"
 
 if [ ! -d "$WALLPAPER_DIR" ]; then
     exit 1

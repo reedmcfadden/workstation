@@ -1,0 +1,6 @@
+#!/bin/bash
+# %i passed from systemd is the service name
+/usr/bin/notify-send -u critical \
+    "Backup Failed" \
+    "The service $1 has failed. Check 'systemctl --user status $1' for details." \
+    --icon=dialog-error

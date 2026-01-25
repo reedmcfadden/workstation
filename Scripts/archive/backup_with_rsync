@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# ensure the dir exists
+mkdir -p /run/media/mcfaddenr/BackupDrive/laptop_rsync_backups
+# backup
+rsync -rAXv --delete \
+	--exclude ~/.local/share/Steam/steamapps/common/ \
+	--exclude ~/Downloads/ \
+	~/ /run/media/mcfaddenr/BackupDrive/laptop_rsync_backups

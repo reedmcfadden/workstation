@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Ensure that only one argument is provided for the name of the note.
+# Exit early if it is not provided.
+if [ "$#" -ne 1 ]; then
+  echo "Error: You must provide one argument for the name of the note."
+  echo "Usage: $0 <argument>"
+  exit 1
+fi
+
+NOTES_DIR="$HOME/Documents/Notes"
+FILENAME=${1}
+FILE="$NOTES_DIR/$(date +%F)-${FILENAME}.md"
+
+# Ensure the notes directory exists
+mkdir -p "$NOTES_DIR"
+
+# If the note does not already exist, populate it with standard header info.
+if [ ! -f "$FILE" ]; then
+  {
+    echo "---"
+    echo "date: $(date +%F)"
+    echo "tags: [<TODO>]"
+    echo "---"
+    echo ""
+    echo "# ${FILENAME}"
+    echo ""
+  } > "${FILE}"
+fi
+
+vim "${FILE}"
