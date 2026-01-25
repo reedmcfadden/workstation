@@ -7,18 +7,6 @@
     state: directory
     mode: '0755'
 
-- name: Create local bin directory
-  file:
-    path: "{{ home }}/.local/bin"
-    state: directory
-    mode: '0755'
-
-- name: Deploy rotate wallpaper script
-  template:
-    src: rotate-wallpaper.sh.j2
-    dest: "{{ home }}/.local/bin/rotate-wallpaper.sh"
-    mode: '0755'
-
 - name: Create systemd user directory
   file:
     path: "{{ home }}/.config/systemd/user"
