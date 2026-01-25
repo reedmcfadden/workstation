@@ -26,10 +26,27 @@ ansible-playbook setup.yml --ask-become-pass
 | Role | Description |
 |------|-------------|
 | `packages` | CLI tools, desktop apps, dev tools, containers |
-| `dotfiles` | Symlinks .bashrc, .vimrc, .tmux.conf, .profile |
+| `dotfiles` | Symlinks .bashrc, .vimrc, .tmux.conf, .profile and scripts |
 | `gnome` | Dark mode, night light, and monospace font settings |
-| `restic` | Automated daily backups to S3 with systemd timer |
+| `restic` | Automated daily backups to S3 with systemd timer and failure notifications |
 | `wallpaper` | Wallpaper rotation from folder with systemd timer |
+
+### Scripts
+
+The following scripts are included and symlinked to `~/.local/bin`:
+
+| Script | Description |
+|--------|-------------|
+| `dockerrun` | Run a command in a docker container |
+| `get_custom_time` | Get the time in a custom format |
+| `inpath` | Check if a command is in the path |
+| `new_note` | Create a new note |
+| `notify-failure` | Send a desktop notification on service failure |
+| `restic-status` | Check the status of restic backups |
+| `rotate-wallpaper.sh` | Rotate the wallpaper |
+| `startscreenkey` | Start screenkey |
+| `take_note` | Take a quick note |
+| `todays_note` | Open today's note |
 
 ### Packages
 
