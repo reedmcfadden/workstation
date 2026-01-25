@@ -1,0 +1,7 @@
+# {{ ansible_managed }}
+[Unit]
+Description=Failure notification for %i
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/notify-failure %i

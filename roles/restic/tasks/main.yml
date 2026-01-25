@@ -26,6 +26,12 @@
     state: directory
     mode: '0755'
 
+- name: Deploy notify-failure service
+  template:
+    src: notify-failure@.service.j2
+    dest: "{{ home }}/.config/systemd/user/notify-failure@.service"
+    mode: '0644'
+
 - name: Deploy restic backup service
   template:
     src: restic-backup.service.j2
