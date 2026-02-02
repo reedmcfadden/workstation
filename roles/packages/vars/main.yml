@@ -11,26 +11,16 @@ cli_packages:
   - tar
   - rsync
   - tree
-  - jq
-  - yq
-
-utility_packages:
-  - ripgrep
-  - fzf
   - gh
 
 # Desktop/GUI apps
 desktop_packages:
-  - gnome-tweaks
-  - gnome-extensions-app
   - firefox
   - libreoffice
   - virt-manager
 
 # Development tools
 dev_packages:
-  - gcc
-  - make
   - ansible
   - ansible-lint
   - ShellCheck
@@ -38,7 +28,6 @@ dev_packages:
 python_packages:
   - python3
   - python3-pip
-  - python3-virtualenv
   - python3-devel
 
 container_packages:
@@ -47,6 +36,7 @@ container_packages:
 
 # Flatpak apps
 flatpak_apps:
-  - net.cozic.joplin_desktop
   # - com.spotify.Client
   # - com.discordapp.Discord
+  # - TODO - add deja dup 
+  # - TODO - add bitwarden
